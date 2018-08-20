@@ -86,8 +86,9 @@ def update():
 	print("Checking for youtube-dl and FFMpeg...")
 	time.sleep(3)
 
-	os.system("apt-get install -y wget")
-
+	os.system("apt-get install -y wget ffmpeg")
+	os.system("Setting up Termux storage...")
+	os.system("termux-setup-storage")
 	time.sleep(3)
 	
 	os.system("wget https://yt-dl.org/downloads/latest/youtube-dl -O ~/youtube-dl && chmod a+rx ~/youtube-dl")
